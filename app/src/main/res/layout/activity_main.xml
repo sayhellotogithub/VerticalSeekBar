@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.iblogstreet.verticalseekbar.SelfVerticalSeekBar
+        style="@style/VerticalVolumeBar"
+        android:layout_width="30dp"
+        android:layout_height="300dp"
+        android:max="100"
+        android:progress="10" />
+
+    <!-- Clock wise - 270 -->
+    <com.iblogstreet.verticalseekbar.view.VerticalSeekBarWrapper
+        android:id="@+id/seekBarContainer2"
+        android:layout_width="50dp"
+        android:layout_height="150dp"
+        android:background="@mipmap/volume_background"
+        android:minWidth="10dp">
+
+        <com.iblogstreet.verticalseekbar.view.VerticalSeekBar
+            android:id="@+id/seekBar2"
+            style="@style/VerticalVolumeBar"
+            android:layout_width="30dp"
+
+            android:layout_height="150dp"
+            android:max="100"
+            android:progress="20"
+            android:splitTrack="false"
+            app:seekBarRotation="CW270" />
+    </com.iblogstreet.verticalseekbar.view.VerticalSeekBarWrapper>
+
+
+</LinearLayout>
